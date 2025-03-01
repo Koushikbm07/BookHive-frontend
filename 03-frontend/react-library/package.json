@@ -3,8 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start":"set HTTPS=true &&  vite",
     "dev": "vite",
     "build": "vite build",
+    "test":"vitest",
     "serve": "vite preview"
   },
   "dependencies": {

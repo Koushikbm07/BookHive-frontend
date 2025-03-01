@@ -42,7 +42,7 @@ export const BookCheckoutPage = () => {
             const response = await fetch(baseUrl);
 
             if (!response.ok) {
-                throw new Error('Something went wrong!');
+                throw new Error('Something went wrong! while fetching book ');
             }
 
             const responseJson = await response.json();
@@ -74,7 +74,7 @@ export const BookCheckoutPage = () => {
             const responseReviews = await fetch(reviewUrl);
 
             if (!responseReviews.ok) {
-                throw new Error('Something went wrong!');
+                throw new Error('Something went wrong! while fetching book reviews');
             }
 
             const responseJsonReviews = await responseReviews.json();
@@ -125,7 +125,7 @@ export const BookCheckoutPage = () => {
                 };
                 const userReview = await fetch(url, requestOptions);
                 if (!userReview.ok) {
-                    throw new Error('Something went wrong');
+                    throw new Error('Something went wrong while fetching user review book');
                 }
                 const userReviewResponseJson = await userReview.json();
                 setIsReviewLeft(userReviewResponseJson);
@@ -151,7 +151,7 @@ export const BookCheckoutPage = () => {
                 };
                 const currentLoansCountResponse = await fetch(url, requestOptions);
                 if (!currentLoansCountResponse.ok)  {
-                    throw new Error('Something went wrong!');
+                    throw new Error('Something went wrong! while fetchUserCurrentLoansCount');
                 }
                 const currentLoansCountResponseJson = await currentLoansCountResponse.json();
                 setCurrentLoansCount(currentLoansCountResponseJson);
@@ -178,7 +178,7 @@ export const BookCheckoutPage = () => {
                 const bookCheckedOut = await fetch(url, requestOptions);
 
                 if (!bookCheckedOut.ok) {
-                    throw new Error('Something went wrong!');
+                    throw new Error('Something went wrong!fetchUserCheckedOutBook');
                 }
 
                 const bookCheckedOutResponseJson = await bookCheckedOut.json();
@@ -217,7 +217,7 @@ export const BookCheckoutPage = () => {
         };
         const checkoutResponse = await fetch(url, requestOptions);
         if (!checkoutResponse.ok) {
-            throw new Error('Something went wrong!');
+            throw new Error('Something went wrong! checkoutBook');
         }
         setIsCheckedOut(true);
     }
@@ -240,7 +240,7 @@ export const BookCheckoutPage = () => {
         };
         const returnResponse = await fetch(url, requestOptions);
         if (!returnResponse.ok) {
-            throw new Error('Something went wrong!');
+            throw new Error('Something went wrong! submitReview');
         }
         setIsReviewLeft(true);
     }
