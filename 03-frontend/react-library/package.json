@@ -3,10 +3,10 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start":"set HTTPS=true &&  vite",
-    "dev": "vite",
+    
+    "dev": "set HTTPS=true && vite",
     "build": "vite build",
-    "test":"vitest",
+    "test": "vitest",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -49,6 +49,7 @@
   "devDependencies": {
     "@types/react-router-dom": "^5.3.3",
     "@vitejs/plugin-react": "^4.0.0",
+    "cross-env": "^7.0.3",
     "vite": "^4.0.0"
   }
 }
